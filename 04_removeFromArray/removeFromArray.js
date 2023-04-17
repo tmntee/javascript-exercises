@@ -1,13 +1,13 @@
-const removeFromArray = function(array, index) {
-    let newArray = [];
-    for (let i = 0; i < array.length; i++)
+const removeFromArray = function(array, ...arg) {
+    const newArray = [];
+    array.forEach((item) => 
     {
-        if (array[i] === index)
-        {
-            newArray.splice(i, 1)
-        }
-    }
-    return newArray
+      if (!arg.includes(item)) 
+      {
+        newArray.push(item);
+      }
+    });
+    return newArray;
 };
 
 // Do not edit below this line
